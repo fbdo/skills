@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "fbdo-skills",
+  "description": "Fabio Oliveira's personal collection of agent skills",
+  "owner": { "name": "Fabio Oliveira" },
+  "plugins": [
+    {
+      "name": "fbdo-skills",
+      "description": "Personal collection of agent skills",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/simplify-path"]
+    }
+  ]
+}
