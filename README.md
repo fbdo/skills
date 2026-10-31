@@ -70,6 +70,17 @@ skills/<name>/SKILL.md            the skill (+ scripts/, references/, assets/)
 2. Add `./skills/<name>` to the `skills` list in `.claude-plugin/marketplace.json` and a row to the catalog above.
 3. Keep project-specific details out. Anything specific to one repository belongs in that repository's own config.
 
+## Check locally
+
+Before opening a PR, run these from the repo root (they mirror `.github/workflows/validate.yml`):
+
+```sh
+node .github/scripts/check-repo.mjs
+node --test skills/*/scripts/*.test.mjs
+```
+
+Spec validation (`skills-ref`) and the marketplace manifest check run in CI.
+
 ## License
 
 [MIT](LICENSE)
